@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 
 export default defineConfig({
-  output: 'static',
-  base: '/meforyou/', // Add your GitHub repository name here.
-});
+  site: 'https://com.github.io',
+  base: 'my-repo',
+})

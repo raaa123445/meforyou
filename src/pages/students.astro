@@ -1,0 +1,84 @@
+---
+const students = [
+  { id: 1, name: 'Alice Johnson', age: 20, course: 'Computer Science' },
+  { id: 2, name: 'Bob Smith', age: 22, course: 'Mechanical Engineering' },
+  { id: 3, name: 'Charlie Lee', age: 19, course: 'Business Administration' },
+  { id: 4, name: 'Diana Miller', age: 21, course: 'Graphic Design' }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students - Student Portal</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f5;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .student-list {
+        max-width: 600px;
+        margin: 0 auto;
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .student-item {
+        background-color: #fff;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .student-item h2 {
+        margin: 0;
+        font-size: 1.5em;
+        color: #0056b3;
+      }
+
+      .student-item p {
+        margin: 5px 0;
+      }
+
+      a {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        width: fit-content;
+        padding: 10px 20px;
+        background-color: #00796b;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      a:hover {
+        background-color: #004d40;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student List</h1>
+    <ul class="student-list">
+      {students.map(student => (
+        <li class="student-item" key={student.id}>
+          <h2>{student.name}</h2>
+          <p>Age: {student.age}</p>
+          <p>Course: {student.course}</p>
+        </li>
+      ))}
+    </ul>
+    <a href="/">Back to Home</a>
+  </body>
+</html>
